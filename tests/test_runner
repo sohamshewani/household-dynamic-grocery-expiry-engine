@@ -1,0 +1,8 @@
+import unittest
+import os
+
+if __name__ == '__main__':
+    test_suite = unittest.TestLoader().discover('src/test/java/com/example/householdgrocery/')
+    test_result = unittest.TextTestRunner(verbosity=2).run(test_suite)
+    if not test_result.wasSuccessful():
+        os._exit(1)
